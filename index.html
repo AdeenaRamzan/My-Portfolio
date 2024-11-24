@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <style>
+            * {
+              margin: 0;
+              padding: 0;
+              background-color: #222831;
+              box-sizing: border-box;
+              
+            }
+            
+      
+            nav ul li a {
+              text-decoration: none;
+              color: white;
+              transition: all 0.3s ease;
+              padding: 5px 10px;
+              font-size: 1rem;
+            }
+      
+            nav ul li a:hover {
+              color: black;
+              transition: color 0.3s ease;
+              border-color: white;
+              background-color: #00adb5;
+              border-radius: 1.5rem;
+            }
+      
+            nav ul li {
+              list-style: none;
+            }
+      
+            nav ul {
+              display: flex;
+              justify-content: end;
+              margin-right: 5rem;
+              gap: 5rem;
+            }
+      
+            .icon {
+              color: white;
+              margin-left: 5rem;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+              font-size: 2.5rem;
+              font-weight: 900;
+            }
+      
+            nav {
+              display: grid;
+              grid-template-columns: 1fr 0fr 2fr;
+              align-items: center;
+              padding: 20px 0px 20px 0px;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+              border-bottom: 2px solid rgb(255, 255, 255, 0.1);
+              position: sticky;
+              top: 0;
+            }
+      
+            .container {
+              display: flex;
+              flex-direction: row;
+              height: 100vh;
+              margin-top: -3rem;
+            }
+      
+            .column {
+              flex: 1;
+              box-sizing: border-box;
+            }
+      
+            .left-column {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            .right-column {
+              background-image: url(imgs/f.png);
+              background-size: 100%;
+            }
+      
+            .intro {
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+              font-size: 4rem;
+              font-weight: 900;
+              color: white;
+              margin-top: 4rem;
+              box-sizing: border-box;
+            }
+      
+            .btxt {
+              display: block;
+              margin-top: 1.5rem;
+              color: white;
+            }
+      
+            .name {
+              display: block;
+              margin-top: 1.5rem;
+              color: #00adb5;
+              font-size: 5rem;
+            }
+      
+            .btn {
+              padding: 0.9rem;
+              width: 9rem;
+              margin-top: 4rem;
+              background-color: #00adb5;
+              border-radius: 2rem;
+              box-sizing: border-box;
+              transition: background-color 0.3s ease, box-shadow 0.3s ease,
+                transform 0.3s ease;
+              border: none;
+            }
+      
+            .btn a {
+              text-decoration: none;
+              color: white;
+              background-color: transparent;
+              font-family: cursive;
+              font-weight: 400;
+              font-size: 1.3rem;
+            }
+      
+            .btn:hover {
+              background-color: white;
+              box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.8);
+              transform: scale(1.05);
+              border: none;
+            }
+      
+            .btn:hover a {
+              color: #222831;
+            }
+      
+            .container2 {
+              display: flex;
+              flex-direction: row;
+              height: 100vh;
+            }
+      
+            .column2 {
+              flex: 1;
+              padding: 5rem;
+              box-sizing: border-box;
+            }
+      
+            .left-column2 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            .right-column2 {
+              background-image: url(imgs/abt.png);
+              background-size: 80%;
+              background-repeat: no-repeat;
+              margin-top: 12rem;
+              margin-left: 15rem;
+            }
+      
+            .ryt2 {
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+              color: white;
+            }
+      
+            .abthead {
+              font-size: 5rem;
+              background-color: rgba(0, 0, 0, 0);
+            }
+      
+            .abttxt {
+              font-size: 1.5rem;
+            }
+      
+            .ctxt {
+              color: #00adb5;
+              background-color: rgba(0, 0, 0, 0);
+            }
+      
+            .skills {
+              background-image: url(imgs/doodles.png);
+              background-size: 30%;
+              padding: 4rem;
+              /* height: 50rem; */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              text-align: center;
+              position: relative;
+              box-sizing: border-box;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            }
+      
+            .skills .cards {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 2rem;
+              margin-top: 2rem;
+              z-index: 2;
+            }
+      
+            .cards {
+              background-color: transparent;
+            }
+      
+            .card {
+              width: 20rem;
+              height: 200px;
+              perspective: 1000px;
+              background: transparent;
+            }
+      
+            .card-inner {
+              width: 100%;
+              height: 100%;
+              transition: transform 0.6s;
+              transform-style: preserve-3d;
+              position: relative;
+              background: rgba(0, 0, 0, 0.3);
+            }
+      
+            .card:hover .card-inner {
+              transform: rotateY(180deg);
+              opacity: 1;
+              background: rgba(0, 0, 0, 0.3);
+            }
+      
+            .card-front,
+            .card-back {
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+              font-size: 1.5rem;
+              font-weight: bold;
+              text-align: center;
+            }
+      
+            .card-front {
+              background: rgba(0, 0, 0, 0.5);
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            img {
+              background: transparent;
+            }
+      
+            .card-back {
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+              transform: rotateY(180deg);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              padding: 1rem;
+            }
+      
+            .card-back .heading {
+              font-size: 1.5rem;
+              font-weight: bold;
+              margin-bottom: 0.5rem;
+              background: transparent;
+            }
+      
+            .card-back .description {
+              font-size: 1rem;
+              color: #ddd;
+              background: transparent;
+            }
+      
+            .contactform {
+              position: absolute;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            }
+      
+            .contact-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 22rem;
+              padding: 9rem;
+            }
+      
+            .contactheading,
+            .contactpara {
+              font-size: 3rem;
+              margin-bottom: 1rem;
+              color: white;
+            }
+      
+            .contactpara {
+              color: #00adb5;
+              font-weight: 800;
+            }
+      
+            label {
+              font-size: 1.5rem;
+              color: white;
+            }
+      
+            input {
+              background-color: rgba(0, 0, 0, 0.3);
+              height: 3rem;
+              width: 20rem;
+              margin-bottom: 2rem;
+              margin-top: 0.5rem;
+              border: none;
+              border-radius: 2rem;
+              text-align: center;
+              color: white;
+            }
+      
+            textarea {
+              background-color: rgba(0, 0, 0, 0.3);
+              height: 5rem;
+              width: 20rem;
+              margin-bottom: 2rem;
+              margin-top: 0.5rem;
+              border: none;
+              border-radius: 2rem;
+              text-align: center;
+              color: white;
+              padding-top: 0.5rem;
+            }
+      
+           textarea{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-top: 1.8rem;
+            font-size: 1.2rem;
+           }
+      
+            
+            .submit-btn{
+  padding: 1rem ;
+  border: none;
+  background: linear-gradient(to right, #00adb5, cyan);
+  border-radius: 2rem;
+  width: 20rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+
+}
+.submit-btn:hover{
+  background:#00adb5;
+  box-shadow: 2px 2px 2px 2px ;
+}
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  nav ul {
+    margin-right: 2rem;
+    gap: 2rem;
+  }
+
+  .icon {
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+
+  .container, .container2 {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column, .left-column2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-column, .right-column2 {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .intro, .name {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .skills {
+    background-size: 50%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .contact-container {
+    margin-left: 0;
+    padding: 4rem;
+    width: 90%;
+  }
+
+  .contact-container input, 
+  .contact-container textarea {
+    width: 100%;
+  }
+  .cards {
+    display: grid;
+    justify-content: space-around;
+     /* Stack cards vertically */
+   
+    width: 20%; /* Ensure full-width for smaller screens */
+   
+  }
+
+  .card {
+    width: 90%; /* Cards take up 90% of the screen width */
+    margin: 0 auto; /* Center cards */
+  }
+
+  .card img {
+    width: 100%; /* Make card images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .card h3, .card p {
+    text-align: center; /* Center-align text */
+    font-size: 1.2rem; /* Adjust text size for smaller screens */
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  .icon {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .intro, .name {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    width: 7rem;
+    padding: 0.7rem;
+  }
+
+  .contactheading, .contactpara {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .contact-container {
+    padding: 2rem;
+  }
+  .right-column2{display: none;}
+}
+@media screen and (max-width: 480px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .intro, .name {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .btn {
+    width: 6rem;
+    padding: 0.5rem;
+  }
+
+  .contactheading, .contactpara {
+    font-size: 1.5rem;
+  }
+
+  .contact-container {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+  .right-column2{display: none;}
+}
+
+          </style>
+        
+  <body>
+    <div id="home">
+    <nav>
+      <span class="icon">My-Portfolio</span><br />
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#AboutMe">ABOUT ME</a></li>
+        
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="column left-column">
+        <div class="ryt">
+          <p class="intro">
+            Hello, I'm <span class="name"> Adeena Ramzan </span>
+            <span class="btxt">Front-end Developer</span
+            ><button class="btn"><a href="">About Me!</a></button>
+          </p>
+        </div>
+      </div>
+      <div class="column right-column"></div>
+    </div>
+    <div id="AboutMe">
+      <div class="container2">
+        <div class="column2 left-column2">
+          <div class="ryt2">
+            <h1 class="abthead">About <span class="ctxt">Me</span></h1>
+            <p class="abttxt">
+              I am a BS <span class="ctxt">Computer Science</span> student with
+              a strong foundation in web development and a keen interest in
+              emerging technologies. Alongside my academic journey, I am
+              pursuing a specialized course in
+              <span class="ctxt">Generative AI</span> to stay ahead in the
+              evolving tech landscape. My technical skill set includes expertise
+              in<span class="ctxt">
+                HTML, CSS, JavaScript,DOM,Python,Bootstrap, Tailwind CSS,
+                Next.js, and WordPress </span
+              >enabling me to build responsive and user-centric web solutions.
+              Committed to continuous learning and innovation, I aspire to
+              leverage my skills to create impactful digital experiences and
+              contribute to cutting-edge projects.
+            </p>
+          </div>
+        </div>
+        <div class="column2 right-column2"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="skills" >
+    <div class="skills">
+      <h1 class="abthead">My <span class="ctxt">Skills</span></h1><br><br>
+      <div class="cards">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/html.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">HTML</div>
+            <div class="description">(Markup Language)</div></div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/text.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">CSS</div>
+            <div class="description">(Cascading Style Sheet)</div></div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/js.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">JavaScript</div>
+            <div class="description">(Programming Language)</div></div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/python.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">Python</div>
+            <div class="description">(Programming Language)</div></div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/bootstrap.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">Bootstrap</div>
+            <div class="description">(CSS Framework)</div></div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/icons8-next.js-48.png" alt="" height="170px"></div>
+            <div class="card-back"><div class="heading">NextJS</div>
+            <div class="description">(React Framework)</div></div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/tailwd.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">Tailwind CSS</div>
+            <div class="description">(CSS Framework)</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"><img src="imgs/wordpress.png" alt="" height="150px"></div>
+            <div class="card-back"><div class="heading">WordPress</div>
+            <div class="description">(content management system (CMS))</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact">
+    <br><br>
+    <center>
+    <section class="contactform">
+      <div class="contact-container">
+        <h2 class="contactheading">Contact Form</h2> 
+        <p class="contactpara">Fill out the form below!!</p> 
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+          </div>
+    
+          <button type="submit" class=" submit-btn">SUBMIT</button>
+        </form>
+      </center>
+      </div>
+    </section>
+    
+    </div>
+  </div>
+  </body>
+</html>
