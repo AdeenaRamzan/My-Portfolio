@@ -82,7 +82,8 @@
       
             .right-column {
               background-image: url(imgs/f.png);
-              background-size: 100%;
+              background-size: cover;
+              
             }
       
             .intro {
@@ -265,6 +266,7 @@
       
             img {
               background: transparent;
+              height:150px
             }
       
             .card-back {
@@ -370,7 +372,7 @@
   background:#00adb5;
   box-shadow: 2px 2px 2px 2px ;
 }
-/* Media Queries for responsiveness */
+
 @media screen and (max-width: 1024px) {
   nav ul {
     margin-right: 2rem;
@@ -415,7 +417,7 @@
   }
 
   .contact-container {
-    margin-left: 0;
+    margin-left: 10rem;
     padding: 4rem;
     width: 90%;
   }
@@ -447,17 +449,32 @@
     text-align: center; /* Center-align text */
     font-size: 1.2rem; /* Adjust text size for smaller screens */
   }
+  .right-column{
+  background-size: 25rem;
+  background-repeat: no-repeat;
+}
+.right-column2{display: none;}
+  .abthead{
+    font-size: 3rem;
+  }
+  .abttxt{
+font-size: 2rem;
 
+  }
 }
 
 @media screen and (max-width: 768px) {
   nav ul {
     gap: 1rem;
+    
+  }
+  nav ul li a{
+    font-size: 0.7rem;
   }
 
   .icon {
     margin-left: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .intro, .name {
@@ -466,7 +483,7 @@
 
   .btn {
     width: 7rem;
-    padding: 0.7rem;
+    padding: 0.6rem;
   }
 
   .contactheading, .contactpara {
@@ -478,11 +495,51 @@
     padding: 2rem;
   }
   .right-column2{display: none;}
+  .abthead{
+    font-size: 3rem;
+  }
+  .abttxt{
+font-size: 1.5rem;
+
+  }
+  .btn a{
+  font-size: 1rem;
 }
+.right-column{
+  background-size: 20rem;
+  background-repeat: no-repeat;
+}
+.card {
+              width: 10rem;
+              margin-left: -2rem;
+              
+             
+             
+            }
+            img{
+              height: 100px;
+            }
+           
+}
+
 @media screen and (max-width: 480px) {
+  
   nav ul {
-    display: block;
-    text-align: center;
+    display: flex;
+    text-align:end;
+    
+  }
+  nav ul li a{
+    font-size: 0.5rem;
+  }
+  .icon{
+    font-size: 1rem
+  }
+  .abthead{
+    font-size: 3rem;
+  }
+  .abttxt{
+font-size: 1rem;
   }
 
   .intro, .name {
@@ -500,16 +557,47 @@
   }
 
   .contact-container {
-    padding: 1rem;
-    width: 100%;
+    margin-left: 2rem;
   }
 
   input, textarea {
     font-size: 1rem;
   }
   .right-column2{display: none;}
+  .btn a{
+  font-size: 1rem;
+}
+.right-column{
+  background-size: 20rem;
+  background-repeat: no-repeat;
+}
+img{
+              height: 10px;
+            }
+            .cards{
+              margin-left: -5rem;
+            }
 }
 
+@media screen and (max-width: 352px) {
+  .skills{
+    background-image: none;
+    margin-left: -5rem;
+  }
+  .icon{
+    font-size: 0.8rem
+  }
+ .skills h1{
+  margin-left: 5rem;
+  }
+  .intro{
+    margin-top: 5rem;
+
+  }
+  .container{
+    margin-left: 3rem;
+  }
+}
           </style>
         
   <body>
@@ -518,7 +606,7 @@
       <span class="icon">My-Portfolio</span><br />
       <ul>
         <li><a href="#home">HOME</a></li>
-        <li><a href="#AboutMe">ABOUT ME</a></li>
+        <li><a href="#AboutMe">ABOUT</a></li>
         
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#contact">CONTACT</a></li>
@@ -531,7 +619,7 @@
           <p class="intro">
             Hello, I'm <span class="name"> Adeena Ramzan </span>
             <span class="btxt">Front-end Developer</span
-            ><button class="btn"><a href="">About Me!</a></button>
+            ><button class="btn"><a href="#AboutMe">About Me!</a></button>
           </p>
         </div>
       </div>
@@ -571,7 +659,7 @@
         <!-- Card 1 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/html.png" alt="" height="150px"></div>
+            <div class="card-front"><img src="imgs/html.png" alt="" ></div>
             <div class="card-back"><div class="heading">HTML</div>
             <div class="description">(Markup Language)</div></div>
           </div>
@@ -579,7 +667,7 @@
         <!-- Card 2 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/text.png" alt="" height="150px"></div>
+            <div class="card-front"><img src="imgs/text.png" alt=""></div>
             <div class="card-back"><div class="heading">CSS</div>
             <div class="description">(Cascading Style Sheet)</div></div>
           </div>
@@ -587,7 +675,7 @@
         <!-- Card 3 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/js.png" alt="" height="150px"></div>
+            <div class="card-front"><img src="imgs/js.png" alt=""></div>
             <div class="card-back"><div class="heading">JavaScript</div>
             <div class="description">(Programming Language)</div></div>
           </div>
@@ -595,7 +683,7 @@
         <!-- Card 4 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/python.png" alt="" height="150px"></div>
+            <div class="card-front"><img src="imgs/python.png" alt=""></div>
             <div class="card-back"><div class="heading">Python</div>
             <div class="description">(Programming Language)</div></div>
           </div>
@@ -603,7 +691,7 @@
         <!-- Card 5 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/bootstrap.png" alt="" height="150px"></div>
+            <div class="card-front"><img src="imgs/bootstrap.png" alt=""></div>
             <div class="card-back"><div class="heading">Bootstrap</div>
             <div class="description">(CSS Framework)</div></div>
           </div>
@@ -611,7 +699,7 @@
         <!-- Card 6 -->
         <div class="card">
           <div class="card-inner">
-            <div class="card-front"><img src="imgs/icons8-next.js-48.png" alt="" height="170px"></div>
+            <div class="card-front"><img src="imgs/icons8-next.js-48.png" alt=""></div>
             <div class="card-back"><div class="heading">NextJS</div>
             <div class="description">(React Framework)</div></div>
           </div>
